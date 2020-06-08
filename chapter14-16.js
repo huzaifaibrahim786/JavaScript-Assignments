@@ -51,6 +51,30 @@ document.write("Score Of "+student[2]+" Is "+scores[2]+" .Percentage Is "+scores
 /* ----------- Question 9 ----------- */
 document.write("<br><br>"+"Question 9 "+"<br><br>");
 
+var colorNames = [];
+var biggeningcolor = prompt("Enter the color to insert at the begining of array (QUESTION 9)");
+var endcolor = prompt("Enter the color to insert at the end of array (QUESTION 9)");
+colorNames.unshift(biggeningcolor);
+colorNames.push(endcolor);
+document.write(colorNames+"<br>");
+colorNames.unshift("purple");
+colorNames.unshift("blue");
+document.write(colorNames+"<br>");
+colorNames.shift();
+colorNames.pop();
+document.write(colorNames+"<br>");
+var addposition = prompt("Enter the position at which you want to add color (QUESTION 9)");
+var colorvalue = prompt("Enter the color to insert at your desired position (QUESTION 9)");
+colorNames.splice(addposition, 0, colorvalue);
+document.write(colorNames+"<br>");
+var delposition = prompt("Enter the position at which you want to delete color (QUESTION 9)");
+var countColors = prompt("How many color do you want to delete from your desired position (QUESTION 9)");
+colorNames.splice(delposition, countColors);
+document.write(colorNames+"<br>");
+
+
+
+
 
 /* ----------- Question 10 ----------- */
 document.write("<br><br>"+"Question 10 "+"<br><br>");
@@ -64,7 +88,10 @@ document.write(sorted+"<br>");
 document.write("<br><br>"+"Question 11 "+"<br><br>");
 
 var cities = ["Karachi","Lahore","Multan","Peshawar","Quetta","Islamabad"];
-var selectedCities = [];
+document.write("<br>Cities List. <br>"+cities+"<br>");
+var newCities = cities.slice(0,2)
+var selectedCities = [newCities];
+document.write("<br>Selected Cities List. <br>"+selectedCities+"<br>");
 
 /* ----------- Question 12 ----------- */
 document.write("<br><br>"+"Question 12 "+"<br><br>");
@@ -77,5 +104,63 @@ document.write(concat+"<br>");
 /* ----------- Question 13 ----------- */
 document.write("<br><br>"+"Question 13 "+"<br><br>");
 
+var devices = [];
+devices.push("Keyboard");
+devices.push("Mouse");
+devices.push("Printer");
+devices.push("Monitor");
 
+document.write("Devices<br>"+devices+"<br>")
+
+document.write("<br>"+"Out"+"<br>")
+var pop1 = devices.shift();
+document.write(pop1);
+document.write("<br>"+"Out"+"<br>")
+var pop2 = devices.shift();
+document.write(pop2);
+document.write("<br>"+"Out"+"<br>")
+var pop3 = devices.shift();
+document.write(pop3);
+document.write("<br>"+"Out"+"<br>")
+var pop4 = devices.shift();
+document.write(pop4);
+
+/* ----------- Question 14 ----------- */
+document.write("<br><br>"+"Question 14 "+"<br><br>");
+
+var devices = [];
+devices.push("Keyboard");
+devices.push("Mouse");
+devices.push("Printer");
+devices.push("Monitor");
+
+document.write("Devices<br>"+devices+"<br>")
+
+document.write("<br>"+"Out"+"<br>")
+var pop1 = devices.pop();
+document.write(pop1);
+document.write("<br>"+"Out"+"<br>")
+var pop2 = devices.pop();
+document.write(pop2);
+document.write("<br>"+"Out"+"<br>")
+var pop3 = devices.pop();
+document.write(pop3);
+document.write("<br>"+"Out"+"<br>")
+var pop4 = devices.pop();
+document.write(pop4);
+
+
+/* ----------- Question 15 ----------- */
+document.write("<br><br>"+"Question 15 is on top of the page "+"<br><br>");
+
+var select = document.getElementById("selectNumber"); 
+var options = ["Apple", "Samsung", "Motorola", "Nokia", "Sony" , "Haier"]; 
+
+
+select.innerHTML = "";
+
+for(var i = 0; i < options.length; i++) {
+    var opt = options[i];
+    select.innerHTML += "<option value=\"" + opt + "\">" + opt + "</option>";
+}
 
